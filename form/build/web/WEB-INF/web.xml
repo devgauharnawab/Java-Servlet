@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="5.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd">
+    <servlet>
+        <servlet-name>Form</servlet-name>
+        <servlet-class>mypkg7.Form</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MyServlet</servlet-name>
+        <servlet-class>mypkg7.MyServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SendMailTo</servlet-name>
+        <servlet-class>mypkg7.SendMailTo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Form</servlet-name>
+        <url-pattern>/form</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MyServlet</servlet-name>
+        <url-pattern>/ms</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SendMailTo</servlet-name>
+        <url-pattern>/smt</url-pattern>
+    </servlet-mapping>
+</web-app>
