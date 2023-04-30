@@ -14,7 +14,7 @@
     <body>
         <h1>Login Form</h1>
         <form action="http://localhost:8080/mvcarch/fc/?action=model&page=LoginModel" method="POST">
-            <input type="text" name="username" placeholder="Username:"/><br>
+            <input type="text" name="name" placeholder="Username:"/><br>
             <input type="password" name="password" placeholder="Password:"/><br>
             <input type="submit" value="submit"/>
         </form>
