@@ -1,6 +1,6 @@
 <%-- 
-    Document   : login1
-    Created on : 13-Mar-2023, 4:56:06 AM
+    Document   : loginpages
+    Created on : 15-Mar-2023, 4:20:28 PM
     Author     : gauhar
 --%>
 
@@ -12,7 +12,8 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <form action="http://localhost/8080/mvcdemo1/fcd/?action=model&page=LoginModel" method="POST">
+        <h1>The second page</h1>
+       
         <input type="text" id="username" name="username">
          <input type="password" id="password" name="password">
 

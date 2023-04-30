@@ -4,6 +4,7 @@
  */
 package mvc1;
 
+import businesspkg.Model;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -31,15 +32,19 @@ public class FrontControllerDemo extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-           out.println("Gauhar Nawab");
+          out.println("Gauhar Nawab");
            String action = request.getParameter("action");
-           String page = request.getParameter("page");
-         /*  out.println("action=" + action);
-           out.println("page=" + page);*/
+           String page = request.getParameter("pages");
          if(action.equals("view")){
              request.getRequestDispatcher("/WEB-INF/pages/" + page + ".jsp").forward(request, response);             
          }else{
-             out.println("Hey...");
+             try{
+                 //we create model interface 
+                 Model m = (Model)Class.forName("businesspkg."+  page).newInstance();
+                 m.requestProcessor(request, response);
+             }catch(Exception e){
+                 e.printStackTrace();
+             }
          }
         }
     }
@@ -82,5 +87,6 @@ public class FrontControllerDemo extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
 
 }
